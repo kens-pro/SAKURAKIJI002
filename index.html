@@ -12,8 +12,8 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>草木染めサラシ 3枚セット｜刺し子どり</title>
-  <meta name="description" content="春の息吹を纏う、草木染めのサラシ。手染めならではの揺らぎを楽しむ3枚セット。今なら5種類の刺し子デザインデータをプレゼント。">
+  <title>草木染めサラシ 3枚セット｜刺し子どり｜残り1セット</title>
+  <meta name="description" content="春の息吹を纏う、草木染めのサラシ。セット1・3は完売、セット2は残り1セットのみ。手染めならではの揺らぎを楽しむ3枚セット。今なら5種類の刺し子デザインデータをプレゼント。ご購入はクレジットカード決済のみです。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
@@ -230,6 +230,43 @@
       opacity: 0;
       animation: fadeUp 1s 0.7s var(--ease-silk) forwards;
     }
+
+    .hero-stock {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 7px;
+      max-width: 620px;
+      margin: -24px 0 34px;
+      padding: 18px 22px;
+      border: 1px solid rgba(201,168,108,0.45);
+      background: linear-gradient(135deg, rgba(181,96,109,0.24), rgba(15,13,12,0.72));
+      box-shadow: 0 18px 44px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+      opacity: 0;
+      animation: fadeUp 1s 0.82s var(--ease-silk) forwards;
+    }
+    .hero-stock-main {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--c-gold-lt);
+    }
+    .hero-stock-sub {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: rgba(250,248,245,0.86);
+    }
+    .hero-stock-note {
+      display: inline-flex;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(250,248,245,0.08);
+      font-size: 0.76rem;
+      color: rgba(250,248,245,0.64);
+      letter-spacing: 0.04em;
+    }
+
     .hero-actions {
       display: flex;
       align-items: center;
@@ -754,6 +791,110 @@
       margin-bottom: 20px;
       line-height: 1.7;
     }
+
+    .product-card.last-one {
+      outline: 1px solid rgba(201,168,108,0.58);
+      box-shadow: 0 0 0 1px rgba(212,129,140,0.18), 0 20px 55px rgba(0,0,0,0.28);
+      z-index: 2;
+    }
+    .product-card.soldout .product-img img {
+      filter: grayscale(0.65) brightness(0.55) saturate(0.55);
+    }
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .product-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      line-height: 1.3;
+      border: 1px solid rgba(250,248,245,0.12);
+      color: rgba(250,248,245,0.72);
+      background: rgba(250,248,245,0.04);
+    }
+    .product-badge.last {
+      border-color: rgba(201,168,108,0.58);
+      color: var(--c-gold-lt);
+      background: rgba(201,168,108,0.10);
+      font-weight: 500;
+    }
+    .product-badge.cardonly {
+      border-color: rgba(212,129,140,0.50);
+      color: var(--c-sakura-lt);
+      background: rgba(212,129,140,0.10);
+    }
+    .product-badge.sold {
+      border-color: rgba(250,248,245,0.10);
+      color: rgba(250,248,245,0.38);
+      background: rgba(250,248,245,0.035);
+    }
+    .product-note {
+      margin-top: 12px;
+      font-size: 0.76rem;
+      line-height: 1.7;
+      color: rgba(250,248,245,0.46);
+    }
+    .stock-ribbon {
+      position: absolute;
+      right: 14px;
+      top: 16px;
+      z-index: 7;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(181,96,109,0.92);
+      color: var(--c-white);
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+    }
+    .stock-announcement {
+      margin: 0 0 24px;
+      padding: 22px 26px;
+      border: 1px solid rgba(201,168,108,0.34);
+      background: linear-gradient(135deg, rgba(250,248,245,0.06), rgba(181,96,109,0.10));
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+    .stock-announcement strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2vw, 1.32rem);
+      color: var(--c-white);
+      margin-bottom: 6px;
+      letter-spacing: 0.06em;
+    }
+    .stock-announcement p {
+      font-size: 0.86rem;
+      line-height: 1.8;
+      color: rgba(250,248,245,0.62);
+    }
+    .stock-announcement .stock-pill {
+      white-space: nowrap;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(201,168,108,0.14);
+      border: 1px solid rgba(201,168,108,0.46);
+      color: var(--c-gold-lt);
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 720px) {
+      .stock-announcement { grid-template-columns: 1fr; }
+      .stock-announcement .stock-pill { width: fit-content; }
+    }
+
     .product-actions {
       display: flex;
       flex-direction: column;
@@ -1088,6 +1229,29 @@
       color: var(--c-white);
     }
 
+
+    .gallery-status {
+      display: inline-flex;
+      vertical-align: middle;
+      margin-left: 10px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+    .gallery-status.sold {
+      color: rgba(250,248,245,0.46);
+      border: 1px solid rgba(250,248,245,0.13);
+      background: rgba(250,248,245,0.04);
+    }
+    .gallery-status.last {
+      color: var(--c-gold-lt);
+      border: 1px solid rgba(201,168,108,0.45);
+      background: rgba(201,168,108,0.10);
+    }
+
     .gallery-set-sub {
       font-size: 0.82rem;
       color: rgba(250,248,245,0.45);
@@ -1289,7 +1453,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="logo">刺し子どり</div>
-    <div class="header-price">¥2,000 <span style="font-size:0.75em; color:var(--c-muted); letter-spacing:0.05em;">tax incl.</span></div>
+    <div class="header-price">LAST 1 SET <span style="font-size:0.75em; color:var(--c-muted); letter-spacing:0.05em;">¥2,000 tax incl.</span></div>
   </header>
  
   <!-- Hero -->
@@ -1304,12 +1468,17 @@
         草木染め<br>サラシ 3枚セット
       </h1>
       <p class="hero-sub">天然素材から抽出した、やさしく、力強い色彩。<br>一期一会の「色の揺らぎ」を、あなたの針仕事のパートナーに。</p>
+      <div class="hero-stock" aria-label="販売状況">
+        <div class="hero-stock-main">完売御礼｜セット1・3は完売しました</div>
+        <div class="hero-stock-sub">現在ご購入いただけるのは「❷ 桜・月桂樹・月桂樹（くすみ）」のみ。残り1セット、先着順でのご案内です。</div>
+        <div class="hero-stock-note">ご購入方法：クレジットカード決済のみ</div>
+      </div>
       <div class="hero-actions">
         <a href="#sets" class="btn-primary">
-          <span>セットを選ぶ</span>
+          <span>残り1セットを見る</span>
           <span class="arrow">→</span>
         </a>
-        <div class="hero-price-tag">¥2,000 <small>（税込）</small></div>
+        <div class="hero-price-tag">¥2,000 <small>（税込・残り1点）</small></div>
       </div>
     </div>
     <div class="hero-deco" aria-hidden="true">春の草木染め　限定セット</div>
@@ -1430,70 +1599,89 @@
         <h2 class="sh-title">草木染め<br>春のラインナップ</h2>
       </div>
       <div class="sh-right">
-        綿100% サラシ<br>
-        約33cm × 約70cm<br>
-        3枚セット / ¥2,000（税込）
+        セット1・3は完売しました<br>
+        現在はセット2のみ残り1セット<br>
+        3枚セット / ¥2,000（税込）<br>
+        ※クレジットカード決済のみ
       </div>
     </div>
  
     <div class="products-wrap">
+      <div class="stock-announcement reveal">
+        <div>
+          <strong>最後の1セットは、❷ 桜・月桂樹・月桂樹（くすみ）です。</strong>
+          <p>❶と❸はおかげさまで完売しました。❷は残り1セットのみのため、Squareのクレジットカード決済が完了した方から先着順で確定となります。</p>
+        </div>
+        <div class="stock-pill">残り1セット</div>
+      </div>
       <div class="products-grid">
  
-       <!-- 01 IN STOCK -->
-        <article class="product-card reveal reveal-delay-1">
+       <!-- 01 SOLD OUT -->
+        <article class="product-card soldout reveal reveal-delay-1" aria-label="セット1 完売">
           <div class="product-img">
             <span class="product-num">01</span>
             <img src="images/sakura002-33.jpg" alt="セット1 桜・ヨモギ・ヨモギ玉ねぎ">
+            <div class="sold-overlay" aria-hidden="true"><div class="sold-text">SOLD OUT</div></div>
           </div>
           <div class="product-body">
+            <div class="product-badges">
+              <span class="product-badge sold">完売しました</span>
+            </div>
             <div class="product-name">❶ 桜・ヨモギ・ヨモギ玉ねぎ</div>
             <div class="product-meta">綿100% サラシ｜約33cm × 約70cm｜3枚セット</div>
             <div class="product-actions">
-              <a href="https://my-site-104584-109581.square.site/product/-3-2026-/7XLMVP7QP6GKZGVYHAG5CJUT?cp=true&sa=true&sbp=false&q=false" class="btn-buy">
-                <span class="icon">🛒</span>クレジットカードで購入
-              </a>
+              <div class="btn-soldout-label">SOLD OUT</div>
               <a href="https://lin.ee/ce9vOwT" class="btn-line">
-                💬 LINEでこのセットを相談
+                💬 LINEで再入荷について相談
               </a>
             </div>
           </div>
         </article>
  
-        <!-- 02 IN STOCK -->
-        <article class="product-card reveal reveal-dela1-1">
+        <!-- 02 LAST ONE -->
+        <article class="product-card last-one reveal reveal-delay-1" aria-label="セット2 残り1セット">
           <div class="product-img">
             <span class="product-num">02</span>
+            <span class="stock-ribbon">残り1セット</span>
             <img src="images/ge6.jpg" alt="セット2 桜・月桂樹・月桂樹（くすみ）">
-        </div>
+          </div>
           <div class="product-body">
+            <div class="product-badges">
+              <span class="product-badge last">残り1セット</span>
+              <span class="product-badge last">先着順</span>
+              <span class="product-badge cardonly">クレジットカード決済のみ</span>
+            </div>
             <div class="product-name">❷ 桜・月桂樹・月桂樹（くすみ）</div>
             <div class="product-meta">綿100% サラシ｜約33cm × 約70cm｜3枚セット</div>
             <div class="product-actions">
               <a href="https://my-site-104584-109581.square.site/product/-3-2026-/7XLMVP7QP6GKZGVYHAG5CJUT?cp=true&sa=true&sbp=false&q=false" class="btn-buy">
-                <span class="icon">🛒</span>クレジットカードで購入
+                <span class="icon">🛒</span>残り1セットをクレジットカードで購入
               </a>
               <a href="https://lin.ee/ce9vOwT" class="btn-line">
-                💬 LINEでこのセットを相談
+                💬 LINEでこのセットを相談（購入はクレカのみ）
               </a>
             </div>
+            <p class="product-note">※在庫は1セットのみです。先着順のため、決済のタイミングによっては完売している場合がございます。</p>
           </div>
         </article>
  
-         <!-- 03 IN STOCK -->
-        <article class="product-card reveal reveal-delay-1">
+         <!-- 03 SOLD OUT -->
+        <article class="product-card soldout reveal reveal-delay-1" aria-label="セット3 完売">
           <div class="product-img">
             <span class="product-num">03</span>
             <img src="images/tama08.jpg" alt="セット3 桜＋金木犀＋玉ねぎ">
+            <div class="sold-overlay" aria-hidden="true"><div class="sold-text">SOLD OUT</div></div>
           </div>
           <div class="product-body">
+            <div class="product-badges">
+              <span class="product-badge sold">完売しました</span>
+            </div>
             <div class="product-name">❸ 桜＋金木犀＋玉ねぎ</div>
             <div class="product-meta">綿100% サラシ｜約33cm × 約70cm｜3枚セット</div>
             <div class="product-actions">
-              <a href="https://my-site-104584-109581.square.site/product/-3-2026-/7XLMVP7QP6GKZGVYHAG5CJUT?cp=true&sa=true&sbp=false&q=false" class="btn-buy">
-                <span class="icon">🛒</span>クレジットカードで購入
-              </a>
+              <div class="btn-soldout-label">SOLD OUT</div>
               <a href="https://lin.ee/ce9vOwT" class="btn-line">
-                💬 LINEでこのセットを相談
+                💬 LINEで再入荷について相談
               </a>
             </div>
           </div>
@@ -1540,14 +1728,15 @@
         <p>
           草木染めは、光の当たり方や折り方によっても表情が変わります。<br>
           それぞれのセットを、もう少し近くでご覧いただけるよう追加写真をご用意しました。<br>
-          お好みの色合いや雰囲気を、ゆっくり見比べながらお選びください。
+          お好みの色合いや雰囲気を、ゆっくり見比べながらお選びください。<br>
+          ※現在ご購入いただけるのは、02のセットのみです。01・03は完売しました。
         </p>
       </div>
 
       <!-- set 01 -->
       <div class="gallery-set reveal">
         <div class="gallery-set-head">
-          <div class="gallery-set-title">01｜桜・ヨモギ・ヨモギ玉ねぎ</div>
+          <div class="gallery-set-title">01｜桜・ヨモギ・ヨモギ玉ねぎ <span class="gallery-status sold">完売</span></div>
           <div class="gallery-set-sub">
             綿100% サラシ / 約33cm × 約70cm / 3枚セット
           </div>
@@ -1575,7 +1764,7 @@
       <!-- set 02 -->
       <div class="gallery-set reveal reveal-delay-1">
         <div class="gallery-set-head">
-          <div class="gallery-set-title">02｜桜・月桂樹・月桂樹（くすみ）</div>
+          <div class="gallery-set-title">02｜桜・月桂樹・月桂樹（くすみ） <span class="gallery-status last">残り1セット</span></div>
           <div class="gallery-set-sub">
             綿100% サラシ / 約33cm × 約70cm / 3枚セット
           </div>
@@ -1603,7 +1792,7 @@
       <!-- set 03 -->
       <div class="gallery-set reveal reveal-delay-2">
         <div class="gallery-set-head">
-          <div class="gallery-set-title">03｜桜・金木犀・玉ねぎ</div>
+          <div class="gallery-set-title">03｜桜・金木犀・玉ねぎ <span class="gallery-status sold">完売</span></div>
           <div class="gallery-set-sub">
             綿100% サラシ / 約33cm × 約70cm / 3枚セット
           </div>
@@ -1647,11 +1836,11 @@
     </div>
   </footer>
  
-  <!-- Sticky LINE -->
+  <!-- Sticky Purchase -->
   <div class="sticky" id="sticky">
-    <a href="https://lin.ee/ce9vOwT" class="sticky-line-btn">
-      <div class="line-icon">💬</div>
-      LINEで相談・注文する
+    <a href="https://my-site-104584-109581.square.site/product/-3-2026-/7XLMVP7QP6GKZGVYHAG5CJUT?cp=true&sa=true&sbp=false&q=false" class="sticky-line-btn">
+      <div class="line-icon">🛒</div>
+      残り1セットをクレカで購入
     </a>
   </div>
  
